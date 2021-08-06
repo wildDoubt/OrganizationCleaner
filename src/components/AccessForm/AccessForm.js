@@ -1,7 +1,8 @@
+/** @jsxImportSource @emotion/react */
 import {Button, Form, Input} from "antd";
 import {useDispatch} from "react-redux";
-import {SelectOrganizationAction} from "../reducers/state";
-
+import {SelectOrganizationAction} from "../../reducers/state";
+import {InputWrapper} from './style'
 const AccessForm = () => {
     const dispatch = useDispatch();
     const [form] = Form.useForm();
@@ -18,6 +19,7 @@ const AccessForm = () => {
                 required: true
             }]}>
             <Input
+                css={InputWrapper}
                 placeholder="Username"/>
         </Form.Item>
         <Form.Item
@@ -26,6 +28,7 @@ const AccessForm = () => {
                 required: true
             }]}>
             <Input
+                css={InputWrapper}
                 placeholder="Github Access Token"/>
         </Form.Item>
         <p><a

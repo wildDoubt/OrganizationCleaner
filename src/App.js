@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import Home from './components/Home'
-import AccessForm from './components/AccessForm'
+import AccessForm from './components/AccessForm/AccessForm'
 import DirectoryTable from './components/DirectoryTable'
 import Confirm from './components/Confirm'
 import AppFooter from './components/AppFooter'
