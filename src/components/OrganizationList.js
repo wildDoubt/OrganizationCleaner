@@ -1,19 +1,19 @@
 import {useDispatch} from "react-redux";
 import {Button} from "antd";
-import {homeAction} from "../reducers/state";
-// 삭제 완료되면 자동으로 Home으로 이동
-const Confirm = () => {
+import {showTableAction} from "../reducers/state";
+
+const OrganizationList = () => {
     const dispatch = useDispatch();
 
     const onClick = () => {
-        dispatch(homeAction);
+        dispatch(showTableAction);
     }
 
     return <>
-        Confirm
+        OrganizationList
         <Button onClick={onClick}>Next</Button>
     </>
 
 }
 
-export default Confirm;
+export default OrganizationList;

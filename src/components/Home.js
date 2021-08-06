@@ -1,9 +1,13 @@
 import {Button, Typography} from 'antd'
+import {useDispatch} from "react-redux";
+import {AccessFormAction} from "../reducers/state";
+
 const {Title} = Typography;
 
-const Home = ({setState}) => {
+const Home = () => {
+    const dispatch = useDispatch();
     const onClick = () =>{
-        setState('form')
+        dispatch(AccessFormAction);
     }
 
     return <>
