@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import {useState, useEffect} from "react";
 import Home from './components/Home'
-import LoginForm from './components/LoginForm'
+import AccessForm from './components/AccessForm'
 import DirectoryTable from './components/DirectoryTable'
 import Confirm from './components/Confirm'
 import AppFooter from './components/AppFooter'
@@ -47,7 +47,7 @@ function App() {
                 >
                     <div css={grow}>
                         {state === 'home' && <Home setState={setState}/>}
-                        {state === 'form' && <LoginForm setState={setState}/>}
+                        {state === 'form' && <AccessForm setState={setState}/>}
                         {state === 'table' && <DirectoryTable setState={setState}/>}
                         {state === 'confirm' && <Confirm setState={setState}/>}
                     </div>
