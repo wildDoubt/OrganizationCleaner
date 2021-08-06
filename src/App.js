@@ -1,37 +1,30 @@
 /** @jsxImportSource @emotion/react */
-import {useState, useEffect} from "react";
 import Home from './components/Home'
 import AccessForm from './components/AccessForm'
 import DirectoryTable from './components/DirectoryTable'
 import Confirm from './components/Confirm'
 import AppFooter from './components/AppFooter'
+import OrganizationList from './components/OrganizationList'
 import {Divider} from "antd";
-import {css} from '@emotion/react';
 import {SwitchTransition, CSSTransition} from 'react-transition-group';
-
-const footer = css`
-  flex: 0;
-  align-self: center;
-`
-
-const grow = css`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex: 1;
-  align-self: center;
-
-`
+import {useSelector, useDispatch} from "react-redux";
+import {useEffect} from "react";
+import {homeAction} from "./reducers/state";
+import {content, footer} from "./AppStyles";
+import {
+    HOME,
+    ACCESS_FORM,
+    CONFIRM,
+    SELECT_ORGANIZATION,
+    SHOW_TABLE
+} from './utils/strings.json'
 
 function App() {
-    // home, form, select_dir, confirm
-    const [state, setState] = useState('')
+    const dispatch = useDispatch();
+    const {state} = useSelector((rootState) => rootState.state);
 
-    useEffect(()=>{
-        console.log('update')
-        setState('home');
+    useEffect(() => {
+        dispatch(homeAction);
     }, [])
 
     return (
@@ -45,11 +38,12 @@ function App() {
                         node.addEventListener("transitionend", done, false);
                     }}
                 >
-                    <div css={grow}>
-                        {state === 'home' && <Home setState={setState}/>}
-                        {state === 'form' && <AccessForm setState={setState}/>}
-                        {state === 'table' && <DirectoryTable setState={setState}/>}
-                        {state === 'confirm' && <Confirm setState={setState}/>}
+                    <div css={content}>
+                        {state === HOME && <Home/>}
+                        {state === ACCESS_FORM && <AccessForm/>}
+                        {state === SELECT_ORGANIZATION && <OrganizationList/>}
+                        {state === SHOW_TABLE && <DirectoryTable/>}
+                        {state === CONFIRM && <Confirm/>}
                     </div>
                 </CSSTransition>
             </SwitchTransition>
