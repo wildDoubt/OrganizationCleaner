@@ -4,7 +4,7 @@ import AccessForm from './components/AccessForm/AccessForm'
 import DirectoryTable from './components/DirectoryTable'
 import Confirm from './components/Confirm'
 import AppFooter from './components/AppFooter'
-import OrganizationList from './components/OrganizationList'
+import OrganizationList from './components/Organization/OrganizationList'
 import {Divider} from "antd";
 import {SwitchTransition, CSSTransition} from 'react-transition-group';
 import {useSelector, useDispatch} from "react-redux";
