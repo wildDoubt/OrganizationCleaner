@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+/** @jsxImportSource @emotion/react */
+import {useState} from "react";
+import Home from './components/Home'
+import LoginForm from './components/LoginForm'
+import DirectoryTable from './components/DirectoryTable'
+import Confirm from './components/Confirm'
+import AppFooter from './components/AppFooter'
+import {Divider} from "antd";
+import {css} from '@emotion/react';
+
+const footer = css`
+  flex:1;
+  align-self: center;
+`
+
+const grow = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex:8;
+  align-self: center;
+  
+`
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // home, form, select_dir, confirm
+    const [state, setState] = useState('home')
+    return (
+        <>
+            <div css={grow}>
+                {state === 'home' && <Home setState={setState}/>}
+                {state === 'form' && <LoginForm setState={setState}/>}
+                {state === 'table' && <DirectoryTable setState={setState}/>}
+                {state === 'confirm' && <Confirm setState={setState}/>}
+            </div>
+            <div css={footer}>
+                <Divider/>
+                <AppFooter/>
+            </div>
+        </>
+    );
 }
 
 export default App;
