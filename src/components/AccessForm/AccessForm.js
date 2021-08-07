@@ -22,7 +22,6 @@ const AccessForm = () => {
 
     const onFinish = (values) => {
         setLoading(true);
-        console.log(values);
         axios(
             {
                 ...config,
@@ -32,7 +31,6 @@ const AccessForm = () => {
             }
         )
             .then(response => {
-                console.log(response.data);
                 dispatch(SelectOrganizationAction)
                 dispatch(getOrganizationsActionCreator(response.data));
             })
