@@ -34,9 +34,7 @@ const OrganizationTable = () => {
     })
 
     const onSelectChange = selectedRowKey => {
-        console.log(organizations[selectedRowKey].login.name)
         setCurrentOrganization(organizations[selectedRowKey].login.name);
-        console.log(selectedRowKey)
     }
 
 

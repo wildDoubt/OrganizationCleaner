@@ -121,7 +121,6 @@ const RepositoryTable = () => {
     }, [repositories])
 
     const onSelectChange = (selectedRowKey) => {
-        console.log(selectedRowKey);
         setSelectedRepositories(selectedRowKey);
     }
 
