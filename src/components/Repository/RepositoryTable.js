@@ -4,7 +4,6 @@ import {useSelector} from "react-redux";
 import {TableWrapper} from "../../styles";
 import {useEffect, useState, useRef} from "react";
 import {SearchOutlined} from '@ant-design/icons';
-import Highlighter from 'react-highlight-words';
 
 const getLocaleString = date => {
     const a = new Date(date);
