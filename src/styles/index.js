@@ -46,11 +46,13 @@ export const buttonWrapper = css`
 
   @media screen and (min-width: 360px) {
     width: 26vw;
+    font-size: 2vw;
     height: 10vw;
   }
 
   @media screen and (min-width: 426px) {
     width: 30vw;
+    font-size: 3vw;
     height: 6vw;
   }
 `
