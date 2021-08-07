@@ -4,13 +4,24 @@ import {
     CONFIRM,
     SELECT_ORGANIZATION,
     SHOW_TABLE,
-    ACCESS_TOKEN
+    ACCESS_TOKEN,
+    DELETE_SUCCESS,
+    DELETE_ERROR
 } from '../utils/strings.json'
 
 
 export const initialState = {
     state: '',
-    accessToken: ''
+    accessToken: '',
+    result: 'idle'
+}
+
+export const successAction = {
+    type: DELETE_SUCCESS
+}
+
+export const errorAction = {
+    type: DELETE_ERROR
 }
 
 export const tokenActionCreator = (data) => {
@@ -66,6 +77,16 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 accessToken: action.data
+            }
+        case DELETE_SUCCESS:
+            return {
+                ...state,
+                result: 'success'
+            }
+        case DELETE_ERROR:
+            return {
+                ...state,
+                result: 'error'
             }
         default:
             return state;

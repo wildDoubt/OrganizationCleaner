@@ -1,48 +1,114 @@
 /** @jsxImportSource @emotion/react */
-import {Table} from "antd";
+import {Button, Input, Space, Table} from "antd";
 import {useSelector} from "react-redux";
 import {TableWrapper} from "../../styles";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useRef} from "react";
+import {SearchOutlined} from '@ant-design/icons';
+import Highlighter from 'react-highlight-words';
+
+const getLocaleString = date => {
+    const a = new Date(date);
+    return a.toLocaleString();
+}
 
 const RepositoryTable = () => {
     const repositories = useSelector(rootState => rootState.repository.repositories)
     const currentOrganization = useSelector(rootState => rootState.repository.login)
     const [isLoading, setIsLoading] = useState(true);
+    const [selectedRepositories, setSelectedRepositories] = useState([]);
+    const [searchText, setSearchText] = useState();
+    const [searchedColumn, setSearchedColumn] = useState();
+    const searchInput = useRef();
+
+    const handleSearch = (selectedKeys, confirm, dataIndex) => {
+        confirm();
+        setSearchText(selectedKeys[0]);
+        setSearchedColumn(dataIndex);
+    };
+
+    const handleReset = clearFilters => {
+        clearFilters();
+        setSearchText('');
+    };
+
+    const getColumnSearchProps = dataIndex => ({
+        filterDropdown: ({setSelectedKeys, selectedKeys, confirm, clearFilters}) => (
+            <div style={{padding: 8}}>
+                <Input
+                    ref={searchInput}
+                    placeholder={`Search ${dataIndex}`}
+                    value={selectedKeys[0]}
+                    onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+                    onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
+                    style={{marginBottom: 8, display: 'block'}}
+                />
+                <Space>
+                    <Button onClick={() => handleReset(clearFilters)} size="small" style={{width: 90}}>
+                        Reset
+                    </Button>
+                    <Button
+                        type="primary"
+                        onClick={() => handleSearch(selectedKeys, confirm, dataIndex)}
+                        icon={<SearchOutlined/>}
+                        size="small"
+                        style={{width: 90}}
+                    >
+                        Search
+                    </Button>
+
+                </Space>
+            </div>
+        ),
+        filterIcon: filtered => <SearchOutlined style={{color: filtered ? '#1890ff' : undefined}}/>,
+        onFilter: (value, record) =>
+            record[dataIndex]
+                ? record[dataIndex].toString().toLowerCase().includes(value.toLowerCase())
+                : '',
+        onFilterDropdownVisibleChange: visible => {
+            if (visible) {
+                setTimeout(() => searchInput.current.select(), 100);
+            }
+        },
+        render: text =>
+            <a
+                style={{fontWeight: 'bold'}}
+                href={`https://www.github.com/${currentOrganization}/${text}`}
+                target="_blank"
+                rel="noreferrer noopener"
+            >{text}</a>
+    });
+
     const columns = [
         {
             title: 'Name',
             dataIndex: 'name',
-            render: (name) =>
-                <a
-                    style={{fontWeight: 'bold'}}
-                    href={`https://www.github.com/${currentOrganization}/${name}`}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                >{name}</a>,
-            sorter: (a, b) => (a.name > b.name) - (a.name < b.name)
+            sorter: (a, b) => (a.name > b.name) - (a.name < b.name),
+            ...getColumnSearchProps('name'),
         },
         {
             title: 'Creation Date',
             dataIndex: 'createdAt',
+            render: getLocaleString,
             defaultSortOrder: 'descend',
-            sorter: (a, b) => (a.createdAt > b.createdAt)-(a.createdAt < b.createdAt)
+            sorter: (a, b) => (a.createdAt > b.createdAt) - (a.createdAt < b.createdAt)
         },
         {
             title: 'Last Updated Date',
             dataIndex: 'updatedAt',
-            sorter: (a, b) => (a.updatedAt > b.updatedAt)-(a.updatedAt < b.updatedAt)
+            render: getLocaleString,
+            sorter: (a, b) => (a.updatedAt > b.updatedAt) - (a.updatedAt < b.updatedAt)
         },
         {
             title: 'Star',
             dataIndex: 'starred',
             width: 60,
-            sorter: (a, b) => (a.starred > b.starred)-(a.starred < b.starred)
+            sorter: (a, b) => (a.starred > b.starred) - (a.starred < b.starred)
         },
         {
             title: 'Watch',
             dataIndex: 'watched',
             width: 60,
-            sorter: (a, b) => (a.watched > b.watched)-(a.watched < b.watched)
+            sorter: (a, b) => (a.watched > b.watched) - (a.watched < b.watched)
         },
     ]
 
@@ -56,6 +122,7 @@ const RepositoryTable = () => {
 
     const onSelectChange = (selectedRowKey) => {
         console.log(selectedRowKey);
+        setSelectedRepositories(selectedRowKey);
     }
 
     const rowSelection = {
@@ -69,11 +136,12 @@ const RepositoryTable = () => {
             rowSelection={rowSelection}
             dataSource={repositories}
             loading={isLoading}
-            scroll={{ x: 'calc(700px)', y: 420 }}>
+            scroll={{x: 'calc(700px)', y: 420}}>
         </Table>
     }
     return {
         renderTable,
+        selectedRepositories
     }
 }
 
