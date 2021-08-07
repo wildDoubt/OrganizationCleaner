@@ -30,7 +30,7 @@ const columns = [
 const OrganizationTable = () => {
     const [currentOrganization, setCurrentOrganization] = useState('');
     const organizations = useSelector((rootState) => {
-        return rootState.organizations
+        return rootState.organization
     })
 
     const onSelectChange = selectedRowKey => {

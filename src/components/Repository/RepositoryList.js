@@ -1,8 +1,11 @@
-import {useDispatch} from "react-redux";
-import {Button} from "antd";
+import {useDispatch, useSelector} from "react-redux";
+import {Button, Image} from "antd";
 import {confirmAction} from "../../reducers/state";
-import {titleWrapper} from "../../styles";
+import {avatarWrapper, titleWrapper} from "../../styles";
 import RepositoryTable from "./RepositoryTable";
+import Title from "../Title";
+
+
 
 const RepositoryList = () => {
     const dispatch = useDispatch();
@@ -16,9 +19,9 @@ const RepositoryList = () => {
     } = RepositoryTable();
 
     return <>
-        <p css={titleWrapper}>
+        <Title>
             Select Repositories
-        </p>
+        </Title>
         {/*https://api.github.com/orgs/kalgory/repos*/}
         {renderTable()}
         <Button onClick={onClick}>Next</Button>

@@ -12,15 +12,19 @@ export const avatarWrapper = css`
 
 export const TableWrapper = css`
   @media screen and (min-width: 360px) {
-    min-width: 30vh;
+    max-width: 30vh;
   }
 
   @media screen and (min-width: 425px) {
-    min-width: 40vh;
+    max-width: 40vh;
   }
 
   @media screen and (min-width: 768px) {
-    min-width: 60vh;
+    min-width: 80vh;
+  }
+
+  @media screen and (min-width: 1096px) {
+    min-width: 120vh;
   }
 `
 export const titleWrapper = css`
@@ -28,11 +32,11 @@ export const titleWrapper = css`
   color: #EDEBEC;
 
   @media screen and (min-width: 360px) {
-    font-size: 3vw;
+    font-size: 5vw;
   }
 
   @media screen and (min-width: 426px) {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 `
 
@@ -42,7 +46,7 @@ export const buttonWrapper = css`
 
   @media screen and (min-width: 360px) {
     width: 26vw;
-    height: 6vw;
+    height: 10vw;
   }
 
   @media screen and (min-width: 426px) {

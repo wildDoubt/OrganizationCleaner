@@ -3,11 +3,11 @@
 // https://developer.github.com/changes/2020-02-10-deprecating-auth-through-query-param/
 import {Button, Form, Input, message} from "antd";
 import {useDispatch} from "react-redux";
-import {SelectOrganizationAction} from "../../reducers/state";
+import {SelectOrganizationAction, tokenActionCreator} from "../../reducers/state";
 import {InputWrapper} from './style'
 import axios from 'axios';
 import {useState} from "react";
-import {getOrganizationsActionCreator} from "../../reducers/organizations";
+import {getOrganizationsActionCreator} from "../../reducers/organization";
 import {textInBody} from "../../styles";
 
 const config = {
@@ -22,6 +22,7 @@ const AccessForm = () => {
 
     const onFinish = (values) => {
         setLoading(true);
+        dispatch(tokenActionCreator(values.accessToken));
         axios(
             {
                 ...config,

@@ -3,8 +3,6 @@ export const initialState = {
     repositories: [
         {
             name: '',
-            private: false,
-            url: '',
             starred: 0,
             watched: 0,
             createdAt: null,
@@ -29,14 +27,19 @@ export const loginActionCreator = (data) => {
 const reducer = (state = [initialState], action) => {
     switch (action.type) {
         case 'ACCESS_REPOSITORIES':
-            return action.data.map((organization, index) => {
-                return {
-                    ...initialState,
-                    key: index,
-                    login: action.data,
-                    description: organization.description
-                }
-            })
+            return {
+                ...state,
+                repositories: action.data.map((repository, index)=>{
+                    return {
+                        key:index,
+                        name: repository.name,
+                        starred: repository.stargazers_count,
+                        watched:repository.watchers_count,
+                        createdAt:repository.created_at,
+                        updatedAt:repository.updated_at
+                    }
+                })
+            }
         case 'LOGIN':
             return {
                 ...initialState,

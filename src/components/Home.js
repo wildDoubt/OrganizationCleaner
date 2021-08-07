@@ -3,6 +3,7 @@ import {Button} from 'antd'
 import {useDispatch} from "react-redux";
 import {AccessFormAction} from "../reducers/state";
 import {buttonWrapper, titleWrapper} from "../styles";
+import Title from "./Title";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -11,10 +12,9 @@ const Home = () => {
     }
 
     return <>
-        <p
-            css={titleWrapper}>
+        <Title>
             Organization Repository Manager
-        </p>
+        </Title>
 
         <Button
             css={buttonWrapper}
