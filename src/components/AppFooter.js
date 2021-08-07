@@ -1,11 +1,12 @@
 /** @jsxImportSource @emotion/react */
-import {css} from '@emotion/react';
+import {textInBody} from "../styles";
 
 
 const AppFooter = () => {
     return <>
         Made by&nbsp;
-        <a href="https://github.com/wilddoubt"
+        <a css={textInBody}
+            href="https://github.com/wilddoubt"
            target="_blank"
            rel="noreferrer noopener">
             wildDoubt
