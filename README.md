@@ -1,5 +1,7 @@
 # Organization Repository Manager
 
+[Demo Site](https://wilddoubt.github.io/organization-repository-manager/)
+
 Clean up your GitHub organization's repositories.
 <div align="center">
     <img src="./anigif.gif"/>
