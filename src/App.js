@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import Home from './components/Home'
 import AccessForm from './components/AccessForm/AccessForm'
-import DirectoryTable from './components/DirectoryTable'
+import RepositoryList from './components/Repository/RepositoryList'
 import Confirm from './components/Confirm'
 import AppFooter from './components/AppFooter'
 import OrganizationList from './components/Organization/OrganizationList'
@@ -42,7 +42,7 @@ function App() {
                         {state === HOME && <Home/>}
                         {state === ACCESS_FORM && <AccessForm/>}
                         {state === SELECT_ORGANIZATION && <OrganizationList/>}
-                        {state === SHOW_TABLE && <DirectoryTable/>}
+                        {state === SHOW_TABLE && <RepositoryList/>}
                         {state === CONFIRM && <Confirm/>}
                     </div>
                 </CSSTransition>
