@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import {Image, Table} from "antd";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {avatarWrapper, TableWrapper} from "../../styles";
 import {useSelector} from "react-redux";
 
@@ -26,28 +26,38 @@ const columns = [
     }
 ]
 
+
 const OrganizationTable = () => {
-    const [value, setValue] = useState(1);
+    const [currentOrganization, setCurrentOrganization] = useState('');
     const organizations = useSelector((rootState) => {
         return rootState.organizations
     })
 
-    const onChange = e => {
-        console.log('radio checked', e.target.value);
-        setValue(e.target.value);
-    };
+    const onSelectChange = selectedRowKey => {
+        console.log(organizations[selectedRowKey].login.name)
+        setCurrentOrganization(organizations[selectedRowKey].login.name);
+        console.log(selectedRowKey)
+    }
 
-    return (
-        <>
-            {console.log(organizations)}
-            <Table
-                css={TableWrapper}
-                rowSelection={{type: 'radio'}}
-                columns={columns}
-                dataSource={organizations}
-            />
-        </>
-    )
+
+    const rowSelection = {
+        type: 'radio',
+        onChange: onSelectChange
+    }
+
+    const renderTable = () => {
+        return <Table
+            css={TableWrapper}
+            rowSelection={rowSelection}
+            columns={columns}
+            dataSource={organizations}
+        />
+    }
+
+    return {
+        renderTable,
+        currentOrganization
+    }
 }
 
 export default OrganizationTable;
