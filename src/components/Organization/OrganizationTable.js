@@ -51,7 +51,7 @@ const OrganizationTable = () => {
       rowSelection={rowSelection}
       columns={columns}
       dataSource={organizations}
-      scroll={{ x: 'calc(300px)', y: 300 }}
+      scroll={{ x: 'calc(300px)', y: 'calc(350px)' }}
     />
   );
 

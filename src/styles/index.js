@@ -11,8 +11,9 @@ export const avatarWrapper = css`
 `;
 
 export const TableWrapper = css`
+  max-width: 30vh;
   @media screen and (min-width: 360px) {
-    max-width: 30vh;
+    max-width: 35vh;
   }
 
   @media screen and (min-width: 425px) {
