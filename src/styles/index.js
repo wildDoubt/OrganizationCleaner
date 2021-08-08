@@ -1,4 +1,4 @@
-import {css} from "@emotion/react";
+import { css } from '@emotion/react';
 
 export const avatarWrapper = css`
   display: flex;
@@ -8,7 +8,7 @@ export const avatarWrapper = css`
   div {
     margin-right: 10px;
   }
-`
+`;
 
 export const TableWrapper = css`
   @media screen and (min-width: 360px) {
@@ -20,13 +20,12 @@ export const TableWrapper = css`
   }
 
   @media screen and (min-width: 768px) {
-    min-width: 80vh;
+    max-width: 70vh;
   }
-
   @media screen and (min-width: 1096px) {
-    min-width: 120vh;
+    max-width: 120vh;
   }
-`
+`;
 export const titleWrapper = css`
   font-family: 'Work Sans', sans-serif;
   color: #EDEBEC;
@@ -35,10 +34,11 @@ export const titleWrapper = css`
     font-size: 5vw;
   }
 
+  
   @media screen and (min-width: 426px) {
     font-size: 5vw;
   }
-`
+`;
 
 export const buttonWrapper = css`
   font-family: 'Open Sans Condensed', sans-serif;
@@ -55,8 +55,8 @@ export const buttonWrapper = css`
     font-size: 3vw;
     height: 6vw;
   }
-`
+`;
 
 export const textInBody = css`
   color: #F7F8FB
-`
+`;

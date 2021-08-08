@@ -1,9 +1,9 @@
-import {css} from "@emotion/react";
+import { css } from '@emotion/react';
 
 export const footer = css`
   flex: 0;
   align-self: center;
-`
+`;
 
 export const content = css`
   display: flex;
@@ -13,4 +13,4 @@ export const content = css`
   text-align: center;
   flex: 1;
   align-self: center;
-`
+`;
