@@ -19,14 +19,21 @@ const Confirm = () => {
       <Result
         status="success"
         title="Successfully deleted repositories. "
-        extra={(
+        extra={[
           <Button
             type="primary"
+            key="back_button"
+            onClick={onClickBackButton}
+          >
+            Back
+          </Button>,
+          <Button
+            key="home_button"
             onClick={onClick}
           >
-            Back Home
-          </Button>
-)}
+            Home
+          </Button>,
+        ]}
       />
       )}
       {result === 'error' && (
