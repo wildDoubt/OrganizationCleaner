@@ -84,7 +84,9 @@ const OrganizationList = () => {
       >
         <p>
           You select
-          <strong>{currentOrganization}</strong>
+          <strong>
+            {` ${currentOrganization}`}
+          </strong>
           . Right?
         </p>
       </Modal>

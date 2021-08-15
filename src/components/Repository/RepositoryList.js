@@ -70,27 +70,30 @@ const RepositoryList = () => {
         Select Repositories
       </Title>
       {hasSelected
-        && (
-        <div style={{
-          display: 'flex',
-          justifyContent: 'flex-start',
-        }}
-        >
-          <p>
-            {selectedRepositories.length}
-            {' '}
-            selected
-          </p>
-        </div>
-        )}
+        ? (
+          <div style={{
+            display: 'flex',
+            justifyContent: 'flex-start',
+            height: '40px',
+          }}
+          >
+            <p>
+              {selectedRepositories.length}
+              {' '}
+              selected
+            </p>
+          </div>
+        )
+        : <div style={{ height: '40px' }} />}
+
       {renderTable()}
       <div style={
-            {
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '0 40px',
-            }
+        {
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '0 40px',
         }
+      }
       >
         <Button
           onClick={onBackButtonClick}
