@@ -72,15 +72,11 @@ const RepositoryList = () => {
       {hasSelected
         ? (
           <div style={{
-            display: 'flex',
-            justifyContent: 'flex-start',
             height: '40px',
           }}
           >
-            <p>
-              {selectedRepositories.length}
-              {' '}
-              selected
+            <p style={{ fontSize: 'x-large' }}>
+              {`${selectedRepositories.length} selected`}
             </p>
           </div>
         )
