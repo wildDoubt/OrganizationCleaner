@@ -1,3 +1,3 @@
-https://wilddoubt.github.io/organization-repository-manager/robotstxt.html
+https://wilddoubt.github.io/organizationCleaner/robotstxt.html
 User-agent: *
 Disallow:
