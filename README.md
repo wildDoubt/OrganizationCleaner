@@ -1,4 +1,4 @@
-# Organization Repository Manager
+# Organization Cleaner
 
 [Demo Site](https://wilddoubt.github.io/organization-repository-manager/)
 
