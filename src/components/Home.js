@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <>
       <Title>
-        Organization Repository Manager
+        Organization Cleaner
       </Title>
 
       <Button
