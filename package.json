@@ -1,6 +1,6 @@
 {
-  "homepage": "https://wilddoubt.github.io/OrganizaionCleaner/",
-  "name": "organizaion-cleaner",
+  "homepage": "https://wilddoubt.github.io/OrganizationCleaner/",
+  "name": "organization-cleaner",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
