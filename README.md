@@ -1,6 +1,6 @@
 # Organization Cleaner
 
-[Demo Site](https://wilddoubt.github.io/organization-repository-manager/)
+[Demo Site](https://wilddoubt.github.io/OrganizationCleaner/)
 
 Clean up your GitHub organization's repositories.
 
