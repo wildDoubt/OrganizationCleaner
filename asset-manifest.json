@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/organization-repository-manager/static/css/main.de249cb8.chunk.css",
-    "main.js": "/organization-repository-manager/static/js/main.030678a4.chunk.js",
-    "main.js.map": "/organization-repository-manager/static/js/main.030678a4.chunk.js.map",
+    "main.js": "/organization-repository-manager/static/js/main.85a586ec.chunk.js",
+    "main.js.map": "/organization-repository-manager/static/js/main.85a586ec.chunk.js.map",
     "runtime-main.js": "/organization-repository-manager/static/js/runtime-main.44ca4a20.js",
     "runtime-main.js.map": "/organization-repository-manager/static/js/runtime-main.44ca4a20.js.map",
     "static/css/2.630ef54a.chunk.css": "/organization-repository-manager/static/css/2.630ef54a.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.630ef54a.chunk.css",
     "static/js/2.81afe8eb.chunk.js",
     "static/css/main.de249cb8.chunk.css",
-    "static/js/main.030678a4.chunk.js"
+    "static/js/main.85a586ec.chunk.js"
   ]
 }
