@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/OrganizaionCleaner/static/css/main.de249cb8.chunk.css",
-    "main.js": "/OrganizaionCleaner/static/js/main.6730cdbf.chunk.js",
-    "main.js.map": "/OrganizaionCleaner/static/js/main.6730cdbf.chunk.js.map",
-    "runtime-main.js": "/OrganizaionCleaner/static/js/runtime-main.247ffae8.js",
-    "runtime-main.js.map": "/OrganizaionCleaner/static/js/runtime-main.247ffae8.js.map",
-    "static/css/2.630ef54a.chunk.css": "/OrganizaionCleaner/static/css/2.630ef54a.chunk.css",
-    "static/js/2.70fabe37.chunk.js": "/OrganizaionCleaner/static/js/2.70fabe37.chunk.js",
-    "static/js/2.70fabe37.chunk.js.map": "/OrganizaionCleaner/static/js/2.70fabe37.chunk.js.map",
-    "static/js/3.e7eb56c5.chunk.js": "/OrganizaionCleaner/static/js/3.e7eb56c5.chunk.js",
-    "static/js/3.e7eb56c5.chunk.js.map": "/OrganizaionCleaner/static/js/3.e7eb56c5.chunk.js.map",
-    "index.html": "/OrganizaionCleaner/index.html",
-    "static/css/2.630ef54a.chunk.css.map": "/OrganizaionCleaner/static/css/2.630ef54a.chunk.css.map",
-    "static/css/main.de249cb8.chunk.css.map": "/OrganizaionCleaner/static/css/main.de249cb8.chunk.css.map",
-    "static/js/2.70fabe37.chunk.js.LICENSE.txt": "/OrganizaionCleaner/static/js/2.70fabe37.chunk.js.LICENSE.txt"
+    "main.css": "/organization-repository-manager/static/css/main.de249cb8.chunk.css",
+    "main.js": "/organization-repository-manager/static/js/main.85a586ec.chunk.js",
+    "main.js.map": "/organization-repository-manager/static/js/main.85a586ec.chunk.js.map",
+    "runtime-main.js": "/organization-repository-manager/static/js/runtime-main.44ca4a20.js",
+    "runtime-main.js.map": "/organization-repository-manager/static/js/runtime-main.44ca4a20.js.map",
+    "static/css/2.630ef54a.chunk.css": "/organization-repository-manager/static/css/2.630ef54a.chunk.css",
+    "static/js/2.81afe8eb.chunk.js": "/organization-repository-manager/static/js/2.81afe8eb.chunk.js",
+    "static/js/2.81afe8eb.chunk.js.map": "/organization-repository-manager/static/js/2.81afe8eb.chunk.js.map",
+    "static/js/3.c42ad77e.chunk.js": "/organization-repository-manager/static/js/3.c42ad77e.chunk.js",
+    "static/js/3.c42ad77e.chunk.js.map": "/organization-repository-manager/static/js/3.c42ad77e.chunk.js.map",
+    "index.html": "/organization-repository-manager/index.html",
+    "static/css/2.630ef54a.chunk.css.map": "/organization-repository-manager/static/css/2.630ef54a.chunk.css.map",
+    "static/css/main.de249cb8.chunk.css.map": "/organization-repository-manager/static/css/main.de249cb8.chunk.css.map",
+    "static/js/2.81afe8eb.chunk.js.LICENSE.txt": "/organization-repository-manager/static/js/2.81afe8eb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.247ffae8.js",
+    "static/js/runtime-main.44ca4a20.js",
     "static/css/2.630ef54a.chunk.css",
-    "static/js/2.70fabe37.chunk.js",
+    "static/js/2.81afe8eb.chunk.js",
     "static/css/main.de249cb8.chunk.css",
-    "static/js/main.6730cdbf.chunk.js"
+    "static/js/main.85a586ec.chunk.js"
   ]
 }
