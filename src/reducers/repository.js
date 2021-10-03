@@ -1,3 +1,5 @@
+import { ACCESS_REPOSITORIES, LOGIN } from '../utils/strings.json';
+
 export const initialState = {
   login: '',
   repositories: [
@@ -12,18 +14,18 @@ export const initialState = {
 };
 
 export const getRepositoriesActionCreator = (data) => ({
-  type: 'ACCESS_REPOSITORIES',
+  type: ACCESS_REPOSITORIES,
   data,
 });
 
 export const loginActionCreator = (data) => ({
-  type: 'LOGIN',
+  type: LOGIN,
   data,
 });
 
 const reducer = (state = [initialState], action) => {
   switch (action.type) {
-    case 'ACCESS_REPOSITORIES':
+    case ACCESS_REPOSITORIES:
       return {
         ...state,
         repositories: action.data.map((repository, index) => ({
@@ -35,7 +37,7 @@ const reducer = (state = [initialState], action) => {
           updatedAt: repository.updated_at,
         })),
       };
-    case 'LOGIN':
+    case LOGIN:
       return {
         ...initialState,
         login: action.data,

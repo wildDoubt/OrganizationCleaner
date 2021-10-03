@@ -7,12 +7,15 @@ import {
   ACCESS_TOKEN,
   DELETE_SUCCESS,
   DELETE_ERROR,
+  IDLE,
+  ERROR,
+  SUCCESS,
 } from '../utils/strings.json';
 
 export const initialState = {
   state: '',
   accessToken: '',
-  result: 'idle',
+  result: IDLE,
 };
 
 export const successAction = {
@@ -83,12 +86,12 @@ const reducer = (state = initialState, action) => {
     case DELETE_SUCCESS:
       return {
         ...state,
-        result: 'success',
+        result: SUCCESS,
       };
     case DELETE_ERROR:
       return {
         ...state,
-        result: 'error',
+        result: ERROR,
       };
     default:
       return state;

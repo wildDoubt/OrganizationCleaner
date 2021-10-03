@@ -1,3 +1,5 @@
+import { ACCESS_ORGANIZATIONS } from '../utils/strings.json';
+
 export const initialState = {
   login: {
     avatarUrl: '',
@@ -7,13 +9,13 @@ export const initialState = {
 };
 
 export const getOrganizationsActionCreator = (data) => ({
-  type: 'ACCESS_ORGANIZATIONS',
+  type: ACCESS_ORGANIZATIONS,
   data,
 });
 
 const reducer = (state = [initialState], action) => {
   switch (action.type) {
-    case 'ACCESS_ORGANIZATIONS':
+    case ACCESS_ORGANIZATIONS:
       return action.data.map((organization, index) => ({
         ...initialState,
         key: index,

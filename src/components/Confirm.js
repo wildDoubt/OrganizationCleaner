@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Result } from 'antd';
 import { homeAction, SelectOrganizationAction } from '../reducers/state';
+import { SUCCESS, ERROR } from '../utils/strings.json';
 
 const Confirm = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Confirm = () => {
 
   return (
     <>
-      {result === 'success' && (
+      {result === SUCCESS && (
       <Result
         status="success"
         title="Successfully deleted repositories. "
@@ -36,7 +37,7 @@ const Confirm = () => {
         ]}
       />
       )}
-      {result === 'error' && (
+      {result === ERROR && (
       <Result
         status="warning"
         title="There are some problems with your operation."
