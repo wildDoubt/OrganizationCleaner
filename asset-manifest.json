@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/OrganizationCleaner/static/css/main.de249cb8.chunk.css",
-    "main.js": "/OrganizationCleaner/static/js/main.06b251e0.chunk.js",
-    "main.js.map": "/OrganizationCleaner/static/js/main.06b251e0.chunk.js.map",
+    "main.js": "/OrganizationCleaner/static/js/main.bb8c3996.chunk.js",
+    "main.js.map": "/OrganizationCleaner/static/js/main.bb8c3996.chunk.js.map",
     "runtime-main.js": "/OrganizationCleaner/static/js/runtime-main.dedfb7e0.js",
     "runtime-main.js.map": "/OrganizationCleaner/static/js/runtime-main.dedfb7e0.js.map",
     "static/css/2.630ef54a.chunk.css": "/OrganizationCleaner/static/css/2.630ef54a.chunk.css",
-    "static/js/2.4afac1c7.chunk.js": "/OrganizationCleaner/static/js/2.4afac1c7.chunk.js",
-    "static/js/2.4afac1c7.chunk.js.map": "/OrganizationCleaner/static/js/2.4afac1c7.chunk.js.map",
+    "static/js/2.3def043a.chunk.js": "/OrganizationCleaner/static/js/2.3def043a.chunk.js",
+    "static/js/2.3def043a.chunk.js.map": "/OrganizationCleaner/static/js/2.3def043a.chunk.js.map",
     "static/js/3.63728282.chunk.js": "/OrganizationCleaner/static/js/3.63728282.chunk.js",
     "static/js/3.63728282.chunk.js.map": "/OrganizationCleaner/static/js/3.63728282.chunk.js.map",
     "index.html": "/OrganizationCleaner/index.html",
     "static/css/2.630ef54a.chunk.css.map": "/OrganizationCleaner/static/css/2.630ef54a.chunk.css.map",
     "static/css/main.de249cb8.chunk.css.map": "/OrganizationCleaner/static/css/main.de249cb8.chunk.css.map",
-    "static/js/2.4afac1c7.chunk.js.LICENSE.txt": "/OrganizationCleaner/static/js/2.4afac1c7.chunk.js.LICENSE.txt"
+    "static/js/2.3def043a.chunk.js.LICENSE.txt": "/OrganizationCleaner/static/js/2.3def043a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dedfb7e0.js",
     "static/css/2.630ef54a.chunk.css",
-    "static/js/2.4afac1c7.chunk.js",
+    "static/js/2.3def043a.chunk.js",
     "static/css/main.de249cb8.chunk.css",
-    "static/js/main.06b251e0.chunk.js"
+    "static/js/main.bb8c3996.chunk.js"
   ]
 }
